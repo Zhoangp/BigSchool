@@ -1,0 +1,49 @@
+/* _content/BigSchool/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-fdclc3o6kz] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-fdclc3o6kz] {
+  color: #0077cc;
+}
+
+.btn-primary[b-fdclc3o6kz] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-fdclc3o6kz], .nav-pills .show > .nav-link[b-fdclc3o6kz] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-fdclc3o6kz] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-fdclc3o6kz] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-fdclc3o6kz] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-fdclc3o6kz] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-fdclc3o6kz] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
