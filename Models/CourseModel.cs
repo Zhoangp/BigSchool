@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BigSchool.Models {
     public class CourseModel {
-        
+     
         public int Id { get; set; }
         public AppUser Lecturer { get; set; }
         [Required]
@@ -13,7 +13,7 @@ namespace BigSchool.Models {
         public DateTime Datetime { get; set; }
         public CategoryModel Category { get; set; }
         [Required]
-        public byte CategoryId { get; set; }
+        public int CategoryId { get; set; }
     }
    
 }

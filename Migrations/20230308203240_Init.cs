@@ -13,7 +13,6 @@ namespace BigSchool.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            Console.WriteLine(1);
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -58,7 +57,7 @@ namespace BigSchool.Migrations
                 name: "CategoryModel",
                 columns: table => new
                 {
-                    Id = table.Column<byte>(type: "tinyint", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
                 },
@@ -182,7 +181,7 @@ namespace BigSchool.Migrations
                     LecturerId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Place = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     Datetime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CategoryId = table.Column<byte>(type: "tinyint", nullable: false)
+                    CategoryId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -200,7 +199,6 @@ namespace BigSchool.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -250,10 +248,7 @@ namespace BigSchool.Migrations
                 name: "IX_CourseModel_LecturerId",
                 table: "CourseModel",
                 column: "LecturerId");
-
-
-
-            var cateFake = new Faker<CategoryModel>();
+                   var cateFake = new Faker<CategoryModel>();
             cateFake.RuleFor(a => a.Name, b => b.Commerce.Categories(1).First());
             for (int i = 0; i < 7; i++)
             {
@@ -267,8 +262,6 @@ namespace BigSchool.Migrations
             );
             }
         }
-
-
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
